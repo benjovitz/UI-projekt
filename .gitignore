@@ -1,0 +1,79 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+
+@benjovitz
+JarlTuxen
+/
+bmi-web-form
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+bmi-web-form/.gitignore
+@JarlTuxen
+JarlTuxen Initial commit
+Latest commit 8e6ae3e 6 days ago
+ History
+ 1 contributor
+38 lines (33 sloc)  425 Bytes
+
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### extra
+.mvn
+mvnw
+mvnw.cmd
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
