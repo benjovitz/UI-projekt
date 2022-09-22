@@ -4,8 +4,64 @@
     <link rel="stylesheet" href="styleSheet.css">
     <meta charset="UTF-8">
     <title>Tricks</title>
+    <style>
+    #myContainer {
+    width: 600px;
+    height: 50px;
+    position: relative;
+    background: yellow;
+    }
+    #myAnimation {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: red;
+
+    </style>
 </head>
 <body>
+
+<img src="images/garbageGoober.png" id="garbageGoober" style="width: 100px; height: 100px;">
+
+
+<div class="div">Hej, dette er et lille klip om hvad du eller andre kan gøre for at undgå mapdspild eller andre former for spild!</div>
+
+<video width="width" height="200" controls>
+
+    <source src="video/garbageGoober.mp4" type="video/mp4">
+
+
+</video>
+
+<div id ="myContainer">
+    <div id ="myAnimation"></div>
+</div>
+
+<p>
+    <button onclick="move()">klik mig!</button>
+</p>
+
+
+
+
+<script>
+    var id = null;
+    function move() {
+        var elem = document.getElementById("myAnimation");
+        var pos = 0;
+        clearInterval(id);
+        id = setInterval(frame, 10);
+        function frame() {
+            if (pos == 550) {
+                clearInterval(id);
+            } else {
+                pos++;
+                elem.style.left = pos + 'px';
+            }
+        }
+    }
+</script>
+
 <div class="topnav">
     <a href="home">Home</a>
     <a href="merch">Merch</a>
