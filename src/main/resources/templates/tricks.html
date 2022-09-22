@@ -12,23 +12,25 @@
     background: yellow;
     }
     #myAnimation {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    background: red;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background: red;
+    }
 
     </style>
 </head>
 <body>
 
-<img src="images/garbageGoober.png" id="garbageGoober" style="width: 100px; height: 100px;">
+<img th:src="@{images/garbageGoober.png}" src="../static/images/garbageGoober.png" style="width: 100px; height: 100px;">
+
 
 
 <div class="div">Hej, dette er et lille klip om hvad du eller andre kan gøre for at undgå mapdspild eller andre former for spild!</div>
 
 <video width="width" height="200" controls>
 
-    <source src="video/garbageGoober.mp4" type="video/mp4">
+    <source th:src="@{video/garbageGoober.mp4}" src="../static/video/garbageGoober.mp4" type="video/mp4">
 
 
 </video>
