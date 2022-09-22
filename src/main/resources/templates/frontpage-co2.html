@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styleSheet.css">
+    <meta charset="UTF-8">
+
+    <style>
+        div {
+            font-family: "Calibri Light",serif;
+        }
+
+        .span {
+            border-style: solid;
+            border-radius: 25px;
+            text-align: center;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+    </style>
+    <title>Home</title>
+</head>
+<body>
+<div class="topnav">
+    <a class="active" href="">Home</a>
+    <a href="merch">Merch</a>
+    <a href="tricks">Tricks</a>
+</div>
+
+<div style="background-color: white;color: black; margin-top: 0; padding-top: 20px;padding-left: 15px;padding-right: 15px;padding-bottom: 25px">
+    <h1 style="text-align: center"><b>DANMARK MOD MADSPILD!</b></h1>
+
+    <span style="margin-left: 60px"> <img th:src="@{images/mad.png}" src="../static/images/mad.png" width="83%"> </span>
+
+    <p class="span">Hver dag bliver der smidt 2000 tons mad ud i Danmark!</p>
+    <p class="span">Madspildet i den danske servicesektor udgør 227.000-ton pr. år. Til sammenligning er det samlede madspild fra husholdningerne 261.000-ton pr. år.</p>
+    <p class="span">Det største madspild i servicesektoren stammer fra detailhandelen, der spilder 163.000 tons pr. år, svarende til 72 % af servicesektorens madspild.</p>
+    <p class="span">Af detailhandelens madspild står specialforretninger som slagtere, fiskeforretninger og grønthandlere for 12.000 tons pr. år, mens ikke-specialiserede forretninger som kiosker, købmænd, supermarkeder og varehuse står for 151.000-ton pr. år. </p>
+    <br>
+    <h2 style="text-align: center">CO-2 UDREGNER!</h2>
+
+    <div>
+        <span th:text="${kg}">kg</span>
+        <span> kg. </span>
+        <span th:text="${madvare}">madvare</span>
+        <span> udleder cirka </span>
+        <span th:text="${co2}">co2</span>
+        <span> kg. CO-2!</span>
+    </div>
+
+    <br>
+
+    <form method="post" action="frontpage-co2">
+        <label for="madvare">Vælg madvare: </label>
+        <input id="madvare" placeholder="vælg madvare" name="madvare" list="madvarer">
+        <datalist id="madvarer">
+            <option value="Oksekød">
+            <option value="Svinekød">
+            <option value="Kyllingekød">
+            <option value="Fisk">
+            <option value="Skalddyr">
+            <option value="Banan">
+            <option value="Æble">
+            <option value="Agurk">
+            <option value="Ost">
+            <option value="Mælk">
+            <option value="Øl">
+            <option value="Kaffe">
+        </datalist>
+        <label for="kg">Indtast antal kg: </label>
+        <input id="kg" placeholder="indtast antal kg" name="kg">
+        <br> <br>
+        <button type="submit">Udregn CO2-aftryk</button>
+    </form>
+</div>
+</body>
+<footer>Kilder: Kortlægning af madaffald i servicesektoren og Kortlægning af dagrenovation i Danmark <br>
+    https://videnskab.dk/miljo-naturvidenskab/sadan-pavirker-din-mad-klimaet</footer>
+</html>

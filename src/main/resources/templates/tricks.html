@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <title>Tricks</title>
     <style>
+    div{
+       font-family: "Calibri Light",serif;
+    }
     #myContainer {
     width: 600px;
     height: 50px;
@@ -12,23 +15,27 @@
     background: yellow;
     }
     #myAnimation {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    background: red;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background: red;
+    }
 
     </style>
 </head>
 <body>
-
-<img src="images/garbageGoober.png" id="garbageGoober" style="width: 100px; height: 100px;">
-
+<div class="topnav">
+    <a href="home">Home</a>
+    <a href="merch">Merch</a>
+    <a class="active" href="tricks">Tricks</a>
+</div>
+<img th:src="@{images/garbageGoober.png}" src="../static/images/garbageGoober.png" style="width: 100px; height: 100px;">
 
 <div class="div">Hej, dette er et lille klip om hvad du eller andre kan gøre for at undgå mapdspild eller andre former for spild!</div>
 
 <video width="width" height="200" controls>
 
-    <source src="video/garbageGoober.mp4" type="video/mp4">
+    <source th:src="@{video/garbageGoober.mp4}" src="../static/video/garbageGoober.mp4" type="video/mp4">
 
 
 </video>
@@ -40,9 +47,6 @@
 <p>
     <button onclick="move()">klik mig!</button>
 </p>
-
-
-
 
 <script>
     var id = null;
@@ -62,11 +66,13 @@
     }
 </script>
 
-<div class="topnav">
-    <a href="home">Home</a>
-    <a href="merch">Merch</a>
-    <a class="active" href="tricks">Tricks</a>
-</div>
+
+
+
+
+
+
+
 
 </body>
 </html>

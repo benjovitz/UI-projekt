@@ -3,6 +3,7 @@ body {
     margin-left: 20%;
     margin-right: 20%;
 }
+
 .topnav {
     background-color: darkgray;
     overflow: hidden;
@@ -18,7 +19,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 22px;
-    width: 390px;
+    width: 30.7%;
 }
 .topnav a:hover {
     background-color: #ddd;
