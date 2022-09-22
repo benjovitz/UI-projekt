@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="defaultStylesheet.css">
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Carousel Slider Demo</title>
+    <link rel="stylesheet" href="css/lightslider.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/lightslider.min.js"></script>
 </head>
 <body>
-<h1 style="margin-left: -30%">forside faq tips</h1>
-<h1 style="background-color: bisque">Hej
-</h1>
-
+<ul id="lightSlider">
+    <li><img src="../white.png" alt="white"/></li>
+    <li><img src="../red.png" alt="red"/></li>
+</ul>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#lightSlider").lightSlider({autoWidth:true});
+    });
+</script>
 </body>
 </html>
