@@ -1,0 +1,31 @@
+body {
+    background: mediumaquamarine;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.topnav {
+    background-color: darkgray;
+    overflow: hidden;
+    margin-left: -34%;
+    margin-right: -33.3%;
+    margin-top: -1%;
+}
+.topnav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    width: 390px;
+}
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.topnav a.active {
+    background-color: orangered;
+    color: white;
+}
+
