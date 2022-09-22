@@ -1,9 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<html lang="en" xmlns:>
 <head>
-    <link rel="stylesheet" href="styleSheet.css">
     <meta charset="UTF-8">
     <title>Merch</title>
+    <link rel="stylesheet" href="Stylesheet.css">
+  <style>
+    div{
+      background-color: orangered;
+      border: 10px;
+        padding: 3px;
+    }
+    .spanmid{
+        position: relative;
+        left: 33%;
+    }
+    .spanend{
+        position: relative;
+        left: 66%;
+    }
+img:hover{
+    transform: scale(2);
+    transition-duration: 0.01s;
+    z-index: 1;
+    transform-origin: top left;
+}
+    #previousbtn{
+        margin-right: 75px;;
+    }
+    #nextbtn{
+        margin-left: 75px;
+    }
+
+  </style>
+    <script src="./javascript/imageArray.js"></script>
+    <script th:inline="javascript">
+
+        var imgArray = new Array();
+
+        imgArray[0] = new Image();
+        imgArray[0].src = '../white.png';
+
+        imgArray[1] = new Image();
+        imgArray[1].src = '../black.png';
+
+        imgArray[2] = new Image();
+        imgArray[2].src = '../green.png';
+
+        imgArray[3] = new Image();
+        imgArray[3].src = '../red.png';
+
+        imgArray[4] = new Image();
+        imgArray[4].src = '../yellow.png';
+
+        imgArray[5] = new Image();
+        imgArray[5].src = '../grey.png';
+
+        imgArray[6] = new Image();
+        imgArray[6].src = '../babyblue.png';
+
+
+        function nextImage(){
+            var img = document.getElementById("mainImage");
+            for(var i = 0; i < imgArray.length;i++){
+                if(imgArray[i].src == img.src){
+                    if(i === imgArray.length){
+                        document.getElementById("mainImage").src = imgArray[0].src;
+                        break;
+                    }
+                    document.getElementById("mainImage").src = imgArray[i+1].src;
+                    break;
+                }
+            }
+        }
+        function previousImage(){
+            var img = document.getElementById("mainImage");
+            for(var i = imgArray.length-1; i >=0 ;i--){
+                if(imgArray[i].src == img.src){
+                    if(i === imgArray.length){
+                        document.getElementById("mainImage").src = imgArray[4].src;
+                        break;
+                    }
+                    document.getElementById("mainImage").src = imgArray[i-1].src;
+                    break;
+                }
+            }
+        }
+    </script>
 </head>
 <body>
 <div class="topnav">
@@ -11,6 +95,23 @@
     <a class="active" href="merch">Merch</a>
     <a href="tricks">Tricks</a>
 </div>
-
+<div>
+  <h1>Velkommen til vores merchandise shop</h1>
+  <p>Alt vores tøj er lavet af genanvendt plast og døde træer</p>
+  <p>du kan også gå til vores partners hjemmeside: <a href="https://toogoodtogo.dk/da">toogoodtogo</a></p>
+</div>
+<div>
+  <h2 style="font-size: 50px">Store</h2>
+</div>
+<div>
+    <p>T-Shirt</p>
+    <img id="mainImage" th:src="@{images/white.png}"src="../white.png" height="300px" width="250px">
+    <p>pris 400kr</p>
+    <button>læg i kurv</button>
+</div>
+<div id="controls">
+    <button id="previousbtn" onclick="previousImage()">tidligere trøje</button>
+    <button id="nextbtn" onclick="nextImage()">næste trøje</button>
+</div>
 </body>
 </html>
