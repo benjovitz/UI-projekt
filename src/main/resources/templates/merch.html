@@ -1,20 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="styleSheet.css">
-    <meta charset="UTF-8">
-    <title>Merch</title>
-</head>
-<body>
-<div class="topnav">
-    <a href="home">Home</a>
-    <a class="active" href="merch">Merch</a>
-    <a href="tricks">Tricks</a>
+
 <html lang="en" xmlns:>
 <head>
     <meta charset="UTF-8">
-    <title>Merchandise</title>
-    <link rel="stylesheet" href="defaultStylesheet.css">
+    <title>Merch</title>
+    <link rel="stylesheet" href="Stylesheet.css">
   <style>
     div{
       background-color: orangered;
@@ -99,6 +90,11 @@ img:hover{
     </script>
 </head>
 <body>
+<div class="topnav">
+    <a href="home">Home</a>
+    <a class="active" href="merch">Merch</a>
+    <a href="tricks">Tricks</a>
+</div>
 <div>
   <h1>Velkommen til vores merchandise shop</h1>
   <p>Alt vores tøj er lavet af genanvendt plast og døde træer</p>
@@ -108,8 +104,8 @@ img:hover{
   <h2 style="font-size: 50px">Store</h2>
 </div>
 <div>
-    <p>T-Shirt <span class="spanmid">Hoodie</span> <span class="spanend">Badeshorts</span></p>
-    <img id="mainImage" th:src="@{images/white.png}" src="../white.png" height="300px" width="250px">
+    <p>T-Shirt</p>
+    <img id="mainImage" th:src="@{images/white.png}"src="../white.png" height="300px" width="250px">
     <p>pris 400kr</p>
     <button>læg i kurv</button>
 </div>
@@ -117,6 +113,5 @@ img:hover{
     <button id="previousbtn" onclick="previousImage()">tidligere trøje</button>
     <button id="nextbtn" onclick="nextImage()">næste trøje</button>
 </div>
-
 </body>
 </html>
