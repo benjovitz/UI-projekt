@@ -19,6 +19,7 @@ public class UIService {
     foodMap.put("Mælk", 1.2);
     foodMap.put("Øl", 1.0);
     foodMap.put("Kaffe", 0.2);
+    foodMap.put("Ost", 20.2);
   }
 
   public HashMap<String, Double> getFoodMap() {
