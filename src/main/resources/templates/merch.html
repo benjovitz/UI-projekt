@@ -9,28 +9,23 @@
   <style>
     div{
       background-color: orangered;
-      border: 10px;
         padding: 3px;
-    }
-    .spanmid{
-        position: relative;
-        left: 33%;
-    }
-    .spanend{
-        position: relative;
-        left: 66%;
+        font-family: "ＭＳ Ｐゴシック";
     }
 img:hover{
-    transform: scale(2);
+    transform: scale(150%);
     transition-duration: 0.01s;
     z-index: 1;
-    transform-origin: top left;
+    transform-origin: center;
 }
     #previousbtn{
         margin-right: 75px;;
     }
     #nextbtn{
         margin-left: 75px;
+    }
+    .span{
+        border-style: solid;
     }
 
   </style>
@@ -68,6 +63,7 @@ img:hover{
                     if(i === imgArray.length){
                         document.getElementById("mainImage").src = imgArray[0].src;
                         break;
+                        print("hej")
                     }
                     document.getElementById("mainImage").src = imgArray[i+1].src;
                     break;
@@ -95,23 +91,32 @@ img:hover{
     <a class="active" href="merch">Merch</a>
     <a href="tricks">Tricks</a>
 </div>
-<div>
-  <h1>Velkommen til vores merchandise shop</h1>
+<center>
+<div class="span">
+   <h1>Velkommen til vores merchandise shop</h1>
   <p>Alt vores tøj er lavet af genanvendt plast og døde træer</p>
   <p>du kan også gå til vores partners hjemmeside: <a href="https://toogoodtogo.dk/da">toogoodtogo</a></p>
 </div>
 <div>
   <h2 style="font-size: 50px">Store</h2>
+
 </div>
 <div>
     <p>T-Shirt</p>
-    <img id="mainImage" th:src="@{images/white.png}"src="../white.png" height="300px" width="250px">
+    <img id="mainImage" th:src="@{images/tshirt_1.png}"src="../white.png" height="300px" width="250px">
+    <img  th:src="@{images/tshirt_2.png}"src="../white.png" height="300px" width="250px">
+    <img  th:src="@{images/tshirt_3.png}"src="../white.png" height="300px" width="250px">
+    <img  th:src="@{images/tshirt_4.png}"src="../white.png" height="300px" width="250px">
+    <img  th:src="@{images/tshirt_5.png}"src="../white.png" height="300px" width="250px">
+    <img  th:src="@{images/tshirt_6.png}"src="../white.png" height="300px" width="250px">
+    <img  th:src="@{images/tshirt_7.png}"src="../white.png" height="300px" width="250px">
     <p>pris 400kr</p>
     <button>læg i kurv</button>
 </div>
 <div id="controls">
-    <button id="previousbtn" onclick="previousImage()">tidligere trøje</button>
-    <button id="nextbtn" onclick="nextImage()">næste trøje</button>
+    <button id="previousbtn" hidden onclick="previousImage()">tidligere trøje</button>
+    <button id="nextbtn" hidden onclick="nextImage()">næste trøje</button>
 </div>
+</center>
 </body>
 </html>
